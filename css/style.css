@@ -1,0 +1,59 @@
+/*--Home page--*/
+body {
+    margin: 0px;
+}
+
+#home_grid_wrapper {
+    display: grid;
+
+    grid-template-columns: 4fr 2fr 1fr;
+    grid-template-rows: 0.8fr 5.2fr 1fr 5fr 5fr 2fr;
+
+    height: 250vh;
+    width: 100vw;
+
+    grid-template-areas:
+    "hna hna hna"
+    "hss hss hss"
+    ".   .   .  "
+    "hgi hgi hoc"
+    "hdt hdm hdm"
+    "hfo hfo hfo"
+    ;
+}
+
+#home_nav {
+  background-color: blue;
+  grid-area: hna;
+}
+
+#home_start_section {
+  background-color: rgb(0, 255, 128);
+  grid-area: hss;
+}
+
+#home_general_info {
+  background-color: rgb(223, 24, 213);
+  grid-area: hgi;
+}
+
+#home_our_capybaras {
+  background-color: rgb(158, 201, 40);
+  grid-area: hoc;
+}
+
+#home_directions_text {
+  background-color: rgb(201, 137, 40);
+  grid-area: hdt;
+}
+
+#home_directions_map{
+  background-color: rgb(94, 141, 110);
+  grid-area: hdm;
+}
+
+#home_footer {
+  background-color: rgb(219, 216, 17);
+  grid-area: hfo;
+}
+/*--Home page--*/
