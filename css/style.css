@@ -1,12 +1,22 @@
+/*--Color vars--*/
+:root {
+  --text_boxes: #aabbe6;
+  --backgrounds: #fee3c8;
+  --nav_and_footer: #6262a0;
+}
+/*--Color vars--*/
+
+
 /*--Home page--*/
 body {
     margin: 0px;
+    background-color: var(--backgrounds);
 }
 
 #map_iframe {
-  height: 100%;
-  width: 100%;
-  border: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
 }
 
 #home_grid_wrapper {
@@ -26,42 +36,52 @@ body {
 }
 
 #home_nav {
-  background-color: blue;
-  grid-area: hna;
+    background-color: var(--nav_and_footer);
+    grid-area: hna;
 }
 
 #home_hero_section {
-  background-color: rgb(0, 255, 128);
-  grid-area: hhs;
-  background-image: url("../img/home_hero_img.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter: brightness(50%);  
+    grid-area: hhs;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    background-image: url("../img/home_hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;  
 }
 
+
+#home_hero_logo {
+    height: 300px;
+    width: auto;
+    flex-direction: column;
+}
+
+
 #home_general_info {
-  background-color: rgb(223, 24, 213);
-  grid-area: hgi;
+    grid-area: hgi;
 }
 
 #home_our_capybaras {
-  background-color: rgb(158, 201, 40);
-  grid-area: hoc;
+    background-color: var(--text_boxes);
+    grid-area: hoc;
 }
 
 #home_directions_text {
-  background-color: rgb(201, 137, 40);
-  grid-area: hdt;
+    grid-area: hdt;
 }
 
 #home_directions_map{
-  background-color: rgb(94, 141, 110);
-  grid-area: hdm;
+    background-color: rgb(94, 141, 110);
+    grid-area: hdm;
 }
 
 #home_footer {
-  background-color: rgb(219, 216, 17);
-  grid-area: hfo;
+    background-color: var(--nav_and_footer);
+    grid-area: hfo;
 }
 /*--Home page--*/
