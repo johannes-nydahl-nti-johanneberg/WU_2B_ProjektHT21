@@ -1,49 +1,51 @@
-/*--Color vars--*/
 :root {
-  --text_boxes: #aabbe6;
-  --backgrounds: #fee3c8;
-  --nav_and_footer: #6262a0;
-}
 /*--Color vars--*/
+    --text_boxes: #aabbe6;
+    --background: #fee3c8;
+    --nav_and_footer: #6262a0;
+    --text_color: #ffffff;
+}
 
+h1 {
+    color: #ffffff;
+}
+
+p {
+    color: #ffffff;
+}
 
 /*--Home page--*/
 body {
-    margin: 0px;
-    background-color: var(--backgrounds);
+    background-color: var(--background);
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
 }
 
 #map_iframe {
     height: 100%;
     width: 100%;
-    border: 0;
 }
 
 #home_grid_wrapper {
     display: grid;
     grid-template-columns: minmax(470px, 4fr) minmax(230px, 2fr) minmax(200px, 1fr);
-    grid-template-rows: 0.8fr 6.2fr 1fr 5fr 5fr 1fr;
+    grid-template-rows: 100vh 5fr 5fr 1fr;
     height: 250vh;
     width: 100%;
     grid-template-areas:
-    "hna hna hna"
-    "hhs hhs hhs"
-    ".   .   .  "
-    "hgi hgi hoc"
+    "heh heh heh"
+    "hgi hgi ouc"
     "hdt hdm hdm"
     "hfo hfo hfo"
     ;
-}
-
-#home_nav {
-    background-color: var(--nav_and_footer);
-    grid-area: hna;
+    gap: 50px;
 }
 
 #home_hero_section {
-    grid-area: hhs;
     display: flex;
-    position: relative;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -52,8 +54,8 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;  
+    height: 100%;
 }
-
 
 #home_hero_logo {
     height: 300px;
@@ -61,27 +63,119 @@ body {
     flex-direction: column;
 }
 
-
 #home_general_info {
+    display: flex;
+    align-items: center;
     grid-area: hgi;
+    background-color: var(--text_boxes);
+    margin-left: 25px;
+}
+
+#home_general_info_img {
+    height: 80%;
+    width: auto;
+    margin-right: 20px;
+}
+
+#home_general_info_text {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #home_our_capybaras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: ouc;
     background-color: var(--text_boxes);
-    grid-area: hoc;
+    margin-right: 25px;
 }
 
 #home_directions_text {
     grid-area: hdt;
+    background-color: var(--text_boxes);
+    margin-left: 25px;
 }
 
 #home_directions_map{
     background-color: rgb(94, 141, 110);
     grid-area: hdm;
+    margin-right: 25px;
 }
 
 #home_footer {
     background-color: var(--nav_and_footer);
     grid-area: hfo;
 }
-/*--Home page--*/
+
+.capybara_profiles {
+    border-radius: 50%;
+    border: #ffffff solid 2px;
+    height: 20%;
+}
+
+/*--Header--*/
+#header {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100px;
+    background-color: var(--nav_and_footer);
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+#nav_items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.nav_links {
+   margin-right: 50px; 
+   margin-left: 50px;
+}
+
+.nav_link_texts {
+    text-decoration: none;
+    color: var(--text_color);
+    font-size: 40px;
+}
+
+#nav_logo_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-right: 45%;
+    margin-left: 20px;
+}
+
+#nav_logo_img {
+    height: 80%;
+    width: auto;
+}
+
+/*--Hero--*/
+#header_hero {
+    display: flex;
+    grid-area: heh;
+    flex-direction: column;
+    height: 100%;
+}
