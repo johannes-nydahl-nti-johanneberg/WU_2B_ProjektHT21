@@ -18,7 +18,7 @@ h1 {
 
 h2 {
 	color: white;
-	font-size: 25px;
+	font-size: 23px;
 }
 
 p {
@@ -26,48 +26,99 @@ p {
 	font-size: 19px;
 }
 
-.content_boxes {
+.text_boxes {
+	display: flex;
+	align-items: center;
+	padding: 25px;
 	background-color: #95ade9;
 	border-radius: 20px;
 }
 
+.image_boxes {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 20px;
+}
+
 /*--About us page--*/
-#images_grid_wrapper {
+#about_grid_wrapper {
 	display: grid;
-	grid-template-columns: minmax(800px, 4fr) minmax(200px, 2fr) minmax(200px, 1fr);
-	grid-template-rows: 100vh 5fr 5fr 350px;
-	height: 280vh;
+	grid-template-columns: 3fr 1fr 3fr;
+	grid-template-rows: 100vh 1fr 1fr 0.7fr 1.3fr 350px;
+	height: 350vh;
 	width: 100%;
 	grid-template-areas:
 		"heh heh heh"
-		"hgi hic ouc"
-		"hwo gic ouc"
+		"ast ast asi"
+		"api apr apr"
+		"ato ato ato"
+		"ati ati ati"
 		"foo foo foo";
 	gap: 50px;
 }
 
-#images_hero_section {
+#about_hero_section {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 
-	background-image: url("../img/home_hero.jpg");
+	background-image: url("../img/about_hero.jpg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 100%;
 }
 
-#images_hero_title {
+#about_hero_title {
 	font-size: 100px;
+}
+
+#about_started {
+	grid-area: ast;
+	margin-left: 25px;
+}
+
+#about_started_img {
+	grid-area: asi;
+	margin-right: 25px;
+}
+
+#about_problem {
+	grid-area: apr;
+	margin-right: 25px;
+}
+
+#about_problem_img {
+	grid-area: api;
+	margin-left: 25px;
+}
+
+#about_today {
+	grid-area: ato;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+#about_today_img {
+	grid-area: ati;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+#about_today_text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 /*--Home page--*/
 #home_grid_wrapper {
 	display: grid;
 	grid-template-columns: minmax(800px, 4fr) minmax(200px, 2fr) minmax(200px, 1fr);
-	grid-template-rows: 100vh 5fr 5fr 350px;
+	grid-template-rows: 100vh 1fr 1fr 350px;
 	height: 280vh;
 	width: 100%;
 	grid-template-areas:
@@ -104,53 +155,25 @@ p {
 }
 
 #home_general_info {
-	display: flex;
-	align-items: center;
 	grid-area: hgi;
 	margin-left: 25px;
-}
-
-#home_general_info_img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 20px;
-}
-
-#home_general_info_text {
-	margin-left: 20px;
-	margin-right: 20px;
 }
 
 #home_general_info_img_container {
 	grid-area: gic;
 }
 
-#home_how_works_text {
-	margin-left: 20px;
-	margin-right: 20px;
-}
-
 #home_how_works_img_container {
 	grid-area: hic;
 }
 
-#home_how_works_img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 20px;
-}
-
 #home_how_works {
-	display: flex;
-	align-items: center;
 	grid-area: hwo;
 	margin-left: 25px;
 }
 
 #home_our_capybaras_title {
-	font-size: 30px;
+	font-size: 25px;
 }
 
 #home_our_capybaras {
@@ -160,9 +183,11 @@ p {
 	justify-content: space-around;
 	grid-area: ouc;
 	margin-right: 25px;
+	background-color: #95ade9;
+	border-radius: 20px;
 }
 
-.capybara_profiles {
+.home_our_capybara_profiles {
 	border-radius: 50%;
 	border: #ffffff solid 4px;
 	height: auto;
@@ -244,6 +269,7 @@ p {
 	align-items: center;
 	justify-content: space-between;
 	flex: 1;
+	margin-left: 25px;
 }
 
 #footer_directions {
